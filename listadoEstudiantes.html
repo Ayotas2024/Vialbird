@@ -1,0 +1,1216 @@
+<!DOCTYPE html> <html lang="es"> <head> <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Estudiantes</title> <link rel="stylesheet" href="styles.css" /> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" /> <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" /> </head> <body class="d-flex flex-column min-vh-100"> <!-- ===================================================== ENCABEZADO ====================================================== --> <header class="custom-header text-white text-center py-4 shadow" >
+<h1 class="display-5 fw-bold">
+
+  Mis
+  <span class="text-warning">
+    Estudiantes
+  </span>
+
+</h1>
+
+<p class="lead">
+
+  Consulta los estudiantes que han participado
+  en tus cursos virtuales
+
+</p>
+
+<nav>
+
+  <ul class="nav justify-content-center mt-3">
+
+    <li class="nav-item">
+
+      <a
+        class="nav-link text-white fw-bold"
+        href="PrincipalInstructor.html"
+      >
+        Inicio
+      </a>
+
+    </li>
+
+    <li class="nav-item">
+
+      <a
+        class="nav-link text-white"
+        href="pestañaCursoInstructor.html"
+      >
+        Multas
+      </a>
+
+    </li>
+
+    <li class="nav-item">
+
+      <a
+        class="nav-link text-white"
+        href="perfilIntructor.html"
+      >
+        Perfil
+      </a>
+
+    </li>
+
+    <li class="nav-item">
+
+      <a
+        class="nav-link text-white"
+        href="listadoEstudiantes.html"
+      >
+        Cursos
+      </a>
+
+    </li>
+
+    <li class="nav-item">
+
+      <a
+        class="nav-link text-white active"
+        href="estudiantes.html"
+      >
+        Estudiantes
+      </a>
+
+    </li>
+
+  </ul>
+
+</nav>
+
+</header> <!-- ===================================================== CONTENIDO PRINCIPAL ====================================================== --> <main class="container my-5 flex-grow-1">
+<!-- ENCABEZADO DE LA SECCIÓN -->
+
+<div
+  class="d-flex justify-content-between align-items-start
+         flex-wrap gap-3 mb-4"
+>
+
+  <div>
+
+    <h2 class="fw-bold text-primary mb-1">
+
+      <i class="fas fa-users me-2"></i>
+
+      Estudiantes registrados
+
+    </h2>
+
+    <p class="text-muted mb-0">
+
+      Consulta los estudiantes que han ingresado
+      a las clases asignadas a este instructor.
+
+    </p>
+
+  </div>
+
+  <!-- CONTADOR -->
+
+  <div>
+
+    <span
+      class="badge bg-primary fs-6 p-2"
+    >
+
+      <i class="fas fa-user-graduate me-1"></i>
+
+      6 estudiantes
+
+    </span>
+
+  </div>
+
+</div>
+
+<!-- =====================================================
+     TABLA DE ESTUDIANTES
+====================================================== -->
+
+<div
+  class="table-responsive shadow rounded bg-white p-4"
+>
+
+  <table
+    class="table table-striped table-hover align-middle"
+  >
+
+    <thead class="table-dark">
+
+      <tr>
+
+        <th>
+          Estudiante
+        </th>
+
+        <th>
+          Curso
+        </th>
+
+        <th>
+          CIA
+        </th>
+
+        <th>
+          Fecha
+        </th>
+
+        <th>
+          Hora
+        </th>
+
+        <th>
+          Infracción
+        </th>
+
+        <th class="text-center">
+          Acción
+        </th>
+
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      <!-- ESTUDIANTE 1 -->
+
+      <tr>
+
+        <td>
+
+          <div class="d-flex align-items-center">
+
+            <div
+              class="rounded-circle bg-primary text-white
+                     d-flex align-items-center justify-content-center
+                     me-2"
+              style="width:40px;height:40px;"
+            >
+
+              <i class="fas fa-user"></i>
+
+            </div>
+
+            <div>
+
+              <strong>
+                María Fernanda López
+              </strong>
+
+              <br />
+
+              <small class="text-muted">
+                CC 1.023.456.781
+              </small>
+
+            </div>
+
+          </div>
+
+        </td>
+
+        <td>
+          Seguridad Vial
+        </td>
+
+        <td>
+          CIA Sabana de Occidente
+        </td>
+
+        <td>
+          05/10/2026
+        </td>
+
+        <td>
+          08:00 AM
+        </td>
+
+        <td>
+
+          <span class="badge bg-danger">
+            Exceso de velocidad
+          </span>
+
+        </td>
+
+        <td class="text-center">
+
+          <button
+            class="btn btn-sm btn-primary ver-detalles"
+
+            data-bs-toggle="modal"
+            data-bs-target="#detalleModal"
+
+            data-nombre="María Fernanda López"
+            data-documento="1.023.456.781"
+            data-telefono="+57 310 456 7812"
+            data-correo="maria.lopez@email.com"
+
+            data-cia="CIA Sabana de Occidente"
+
+            data-curso="Curso de Seguridad Vial"
+
+            data-fecha="05 de octubre de 2026"
+            data-hora="08:00 AM - 12:00 PM"
+
+            data-duracion="4 horas"
+
+            data-infraccion="Exceso de velocidad"
+
+            data-estado="Curso completado"
+          >
+
+            <i class="fas fa-eye me-1"></i>
+
+            Ver detalles
+
+          </button>
+
+        </td>
+
+      </tr>
+
+      <!-- ESTUDIANTE 2 -->
+
+      <tr>
+
+        <td>
+
+          <div class="d-flex align-items-center">
+
+            <div
+              class="rounded-circle bg-success text-white
+                     d-flex align-items-center justify-content-center
+                     me-2"
+              style="width:40px;height:40px;"
+            >
+
+              <i class="fas fa-user"></i>
+
+            </div>
+
+            <div>
+
+              <strong>
+                Andrés Felipe Gómez
+              </strong>
+
+              <br />
+
+              <small class="text-muted">
+                CC 1.045.678.234
+              </small>
+
+            </div>
+
+          </div>
+
+        </td>
+
+        <td>
+          Normas de Tránsito
+        </td>
+
+        <td>
+          CIA Mosquera
+        </td>
+
+        <td>
+          08/10/2026
+        </td>
+
+        <td>
+          02:00 PM
+        </td>
+
+        <td>
+
+          <span class="badge bg-warning text-dark">
+            Documentación
+          </span>
+
+        </td>
+
+        <td class="text-center">
+
+          <button
+            class="btn btn-sm btn-primary ver-detalles"
+
+            data-bs-toggle="modal"
+            data-bs-target="#detalleModal"
+
+            data-nombre="Andrés Felipe Gómez"
+            data-documento="1.045.678.234"
+            data-telefono="+57 315 234 5678"
+            data-correo="andres.gomez@email.com"
+
+            data-cia="CIA Mosquera"
+
+            data-curso="Curso de Normas de Tránsito"
+
+            data-fecha="08 de octubre de 2026"
+            data-hora="02:00 PM - 05:00 PM"
+
+            data-duracion="3 horas"
+
+            data-infraccion="Documentación obligatoria"
+
+            data-estado="Curso completado"
+          >
+
+            <i class="fas fa-eye me-1"></i>
+
+            Ver detalles
+
+          </button>
+
+        </td>
+
+      </tr>
+
+      <!-- ESTUDIANTE 3 -->
+
+      <tr>
+
+        <td>
+
+          <div class="d-flex align-items-center">
+
+            <div
+              class="rounded-circle bg-warning text-dark
+                     d-flex align-items-center justify-content-center
+                     me-2"
+              style="width:40px;height:40px;"
+            >
+
+              <i class="fas fa-user"></i>
+
+            </div>
+
+            <div>
+
+              <strong>
+                Laura Valentina Pérez
+              </strong>
+
+              <br />
+
+              <small class="text-muted">
+                CC 1.032.567.890
+              </small>
+
+            </div>
+
+          </div>
+
+        </td>
+
+        <td>
+          Prevención de Accidentes
+        </td>
+
+        <td>
+          CIA Funza
+        </td>
+
+        <td>
+          12/10/2026
+        </td>
+
+        <td>
+          09:00 AM
+        </td>
+
+        <td>
+
+          <span class="badge bg-danger">
+            Estacionamiento prohibido
+          </span>
+
+        </td>
+
+        <td class="text-center">
+
+          <button
+            class="btn btn-sm btn-primary ver-detalles"
+
+            data-bs-toggle="modal"
+            data-bs-target="#detalleModal"
+
+            data-nombre="Laura Valentina Pérez"
+            data-documento="1.032.567.890"
+            data-telefono="+57 320 567 8901"
+            data-correo="laura.perez@email.com"
+
+            data-cia="CIA Funza"
+
+            data-curso="Curso de Prevención de Accidentes"
+
+            data-fecha="12 de octubre de 2026"
+            data-hora="09:00 AM - 01:00 PM"
+
+            data-duracion="4 horas"
+
+            data-infraccion="Estacionamiento prohibido"
+
+            data-estado="Curso completado"
+          >
+
+            <i class="fas fa-eye me-1"></i>
+
+            Ver detalles
+
+          </button>
+
+        </td>
+
+      </tr>
+
+      <!-- ESTUDIANTE 4 -->
+
+      <tr>
+
+        <td>
+
+          <div class="d-flex align-items-center">
+
+            <div
+              class="rounded-circle bg-info text-white
+                     d-flex align-items-center justify-content-center
+                     me-2"
+              style="width:40px;height:40px;"
+            >
+
+              <i class="fas fa-user"></i>
+
+            </div>
+
+            <div>
+
+              <strong>
+                Daniel Esteban Ruiz
+              </strong>
+
+              <br />
+
+              <small class="text-muted">
+                CC 1.015.789.456
+              </small>
+
+            </div>
+
+          </div>
+
+        </td>
+
+        <td>
+          Seguridad Vial
+        </td>
+
+        <td>
+          CIA Sabana de Occidente
+        </td>
+
+        <td>
+          05/10/2026
+        </td>
+
+        <td>
+          08:00 AM
+        </td>
+
+        <td>
+
+          <span class="badge bg-danger">
+            Exceso de velocidad
+          </span>
+
+        </td>
+
+        <td class="text-center">
+
+          <button
+            class="btn btn-sm btn-primary ver-detalles"
+
+            data-bs-toggle="modal"
+            data-bs-target="#detalleModal"
+
+            data-nombre="Daniel Esteban Ruiz"
+            data-documento="1.015.789.456"
+            data-telefono="+57 300 789 4561"
+            data-correo="daniel.ruiz@email.com"
+
+            data-cia="CIA Sabana de Occidente"
+
+            data-curso="Curso de Seguridad Vial"
+
+            data-fecha="05 de octubre de 2026"
+            data-hora="08:00 AM - 12:00 PM"
+
+            data-duracion="4 horas"
+
+            data-infraccion="Exceso de velocidad"
+
+            data-estado="Curso completado"
+          >
+
+            <i class="fas fa-eye me-1"></i>
+
+            Ver detalles
+
+          </button>
+
+        </td>
+
+      </tr>
+
+      <!-- ESTUDIANTE 5 -->
+
+      <tr>
+
+        <td>
+
+          <div class="d-flex align-items-center">
+
+            <div
+              class="rounded-circle bg-secondary text-white
+                     d-flex align-items-center justify-content-center
+                     me-2"
+              style="width:40px;height:40px;"
+            >
+
+              <i class="fas fa-user"></i>
+
+            </div>
+
+            <div>
+
+              <strong>
+                Camilo Andrés Torres
+              </strong>
+
+              <br />
+
+              <small class="text-muted">
+                CC 1.021.456.789
+              </small>
+
+            </div>
+
+          </div>
+
+        </td>
+
+        <td>
+          Normas de Tránsito
+        </td>
+
+        <td>
+          CIA Mosquera
+        </td>
+
+        <td>
+          08/10/2026
+        </td>
+
+        <td>
+          02:00 PM
+        </td>
+
+        <td>
+
+          <span class="badge bg-warning text-dark">
+            Documentación
+          </span>
+
+        </td>
+
+        <td class="text-center">
+
+          <button
+            class="btn btn-sm btn-primary ver-detalles"
+
+            data-bs-toggle="modal"
+            data-bs-target="#detalleModal"
+
+            data-nombre="Camilo Andrés Torres"
+            data-documento="1.021.456.789"
+            data-telefono="+57 311 456 7890"
+            data-correo="camilo.torres@email.com"
+
+            data-cia="CIA Mosquera"
+
+            data-curso="Curso de Normas de Tránsito"
+
+            data-fecha="08 de octubre de 2026"
+            data-hora="02:00 PM - 05:00 PM"
+
+            data-duracion="3 horas"
+
+            data-infraccion="Documentación obligatoria"
+
+            data-estado="Curso completado"
+          >
+
+            <i class="fas fa-eye me-1"></i>
+
+            Ver detalles
+
+          </button>
+
+        </td>
+
+      </tr>
+
+      <!-- ESTUDIANTE 6 -->
+
+      <tr>
+
+        <td>
+
+          <div class="d-flex align-items-center">
+
+            <div
+              class="rounded-circle bg-danger text-white
+                     d-flex align-items-center justify-content-center
+                     me-2"
+              style="width:40px;height:40px;"
+            >
+
+              <i class="fas fa-user"></i>
+
+            </div>
+
+            <div>
+
+              <strong>
+                Sofía Alejandra Martínez
+              </strong>
+
+              <br />
+
+              <small class="text-muted">
+                CC 1.067.345.821
+              </small>
+
+            </div>
+
+          </div>
+
+        </td>
+
+        <td>
+          Prevención de Accidentes
+        </td>
+
+        <td>
+          CIA Funza
+        </td>
+
+        <td>
+          12/10/2026
+        </td>
+
+        <td>
+          09:00 AM
+        </td>
+
+        <td>
+
+          <span class="badge bg-danger">
+            Semáforo en rojo
+          </span>
+
+        </td>
+
+        <td class="text-center">
+
+          <button
+            class="btn btn-sm btn-primary ver-detalles"
+
+            data-bs-toggle="modal"
+            data-bs-target="#detalleModal"
+
+            data-nombre="Sofía Alejandra Martínez"
+            data-documento="1.067.345.821"
+            data-telefono="+57 318 345 6789"
+            data-correo="sofia.martinez@email.com"
+
+            data-cia="CIA Funza"
+
+            data-curso="Curso de Prevención de Accidentes"
+
+            data-fecha="12 de octubre de 2026"
+            data-hora="09:00 AM - 01:00 PM"
+
+            data-duracion="4 horas"
+
+            data-infraccion="No respetar semáforo en rojo"
+
+            data-estado="Curso completado"
+          >
+
+            <i class="fas fa-eye me-1"></i>
+
+            Ver detalles
+
+          </button>
+
+        </td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
+
+</main> <!-- ===================================================== MODAL DETALLES DEL ESTUDIANTE ====================================================== --> <div class="modal fade" id="detalleModal" tabindex="-1" aria-labelledby="detalleModalLabel" aria-hidden="true" >
+<div
+  class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+>
+
+  <div class="modal-content shadow-lg">
+
+    <!-- ENCABEZADO -->
+
+    <div class="modal-header bg-primary text-white">
+
+      <div>
+
+        <h5
+          class="modal-title"
+          id="detalleModalLabel"
+        >
+
+          Detalles del estudiante
+
+        </h5>
+
+        <small id="modalCurso"></small>
+
+      </div>
+
+      <button
+        type="button"
+        class="btn-close bg-white"
+        data-bs-dismiss="modal"
+        aria-label="Cerrar"
+      ></button>
+
+    </div>
+
+    <!-- CUERPO -->
+
+    <div class="modal-body">
+
+      <!-- DATOS PERSONALES -->
+
+      <h5 class="fw-bold text-primary mb-3">
+
+        <i class="fas fa-user-circle me-2"></i>
+
+        Información del estudiante
+
+      </h5>
+
+      <div class="row g-3 mb-4">
+
+        <div class="col-md-6">
+
+          <div class="card bg-light border-0 h-100">
+
+            <div class="card-body">
+
+              <strong>
+                Nombre completo
+              </strong>
+
+              <p
+                id="modalNombre"
+                class="mb-0 mt-1"
+              ></p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-md-6">
+
+          <div class="card bg-light border-0 h-100">
+
+            <div class="card-body">
+
+              <strong>
+                Cédula de Ciudadanía
+              </strong>
+
+              <p
+                id="modalDocumento"
+                class="mb-0 mt-1"
+              ></p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-md-6">
+
+          <div class="card bg-light border-0 h-100">
+
+            <div class="card-body">
+
+              <strong>
+
+                <i class="fas fa-phone me-1"></i>
+
+                Teléfono
+
+              </strong>
+
+              <p
+                id="modalTelefono"
+                class="mb-0 mt-1"
+              ></p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-md-6">
+
+          <div class="card bg-light border-0 h-100">
+
+            <div class="card-body">
+
+              <strong>
+
+                <i class="fas fa-envelope me-1"></i>
+
+                Correo electrónico
+
+              </strong>
+
+              <p
+                id="modalCorreo"
+                class="mb-0 mt-1"
+              ></p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- INFORMACIÓN DE LA CLASE -->
+
+      <h5 class="fw-bold text-primary mb-3">
+
+        <i class="fas fa-chalkboard-teacher me-2"></i>
+
+        Información de la clase
+
+      </h5>
+
+      <div class="alert alert-info">
+
+        <div class="row g-3">
+
+          <div class="col-md-6">
+
+            <strong>
+
+              <i class="fas fa-building me-1"></i>
+
+              CIA:
+
+            </strong>
+
+            <span id="modalCia"></span>
+
+          </div>
+
+          <div class="col-md-6">
+
+            <strong>
+
+              <i class="fas fa-graduation-cap me-1"></i>
+
+              Curso:
+
+            </strong>
+
+            <span id="modalCursoDetalle"></span>
+
+          </div>
+
+          <div class="col-md-6">
+
+            <strong>
+
+              <i class="fas fa-calendar me-1"></i>
+
+              Fecha:
+
+            </strong>
+
+            <span id="modalFecha"></span>
+
+          </div>
+
+          <div class="col-md-6">
+
+            <strong>
+
+              <i class="fas fa-clock me-1"></i>
+
+              Horario:
+
+            </strong>
+
+            <span id="modalHora"></span>
+
+          </div>
+
+          <div class="col-md-6">
+
+            <strong>
+
+              <i class="fas fa-hourglass-half me-1"></i>
+
+              Duración:
+
+            </strong>
+
+            <span id="modalDuracion"></span>
+
+          </div>
+
+          <div class="col-md-6">
+
+            <strong>
+
+              <i class="fas fa-road me-1"></i>
+
+              Modalidad:
+
+            </strong>
+
+            Virtual
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- INFRACCIÓN -->
+
+      <h5 class="fw-bold text-primary mb-3">
+
+        <i class="fas fa-triangle-exclamation me-2"></i>
+
+        Información de la infracción
+
+      </h5>
+
+      <div class="card border-danger mb-4">
+
+        <div class="card-body">
+
+          <p class="mb-1">
+
+            <strong>
+              Tipo de infracción:
+            </strong>
+
+          </p>
+
+          <span
+            id="modalInfraccion"
+            class="badge bg-danger fs-6"
+          ></span>
+
+        </div>
+
+      </div>
+
+      <!-- ESTADO -->
+
+      <div
+        class="alert alert-success"
+        role="alert"
+      >
+
+        <i class="fas fa-circle-check me-2"></i>
+
+        <strong>
+          Estado de la capacitación:
+        </strong>
+
+        <span id="modalEstado"></span>
+
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="modal-footer">
+
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-bs-dismiss="modal"
+      >
+
+        Cerrar
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div> <!-- ===================================================== FOOTER ====================================================== --> <footer class="footer text-white text-center py-3 mt-auto" >
+<p class="mb-0">
+
+  &copy; 2026 Vialbird.
+  Todos los derechos reservados.
+
+</p>
+
+</footer> <!-- BOOTSTRAP --> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" ></script> <!-- ===================================================== JAVASCRIPT ====================================================== --> <script>
+/*
+ * Botones "Ver detalles"
+ */
+
+document
+  .querySelectorAll(".ver-detalles")
+  .forEach(boton => {
+
+    boton.addEventListener("click", function () {
+
+      /*
+       * Obtener información
+       * del estudiante
+       */
+
+      const nombre =
+        this.dataset.nombre;
+
+      const documento =
+        this.dataset.documento;
+
+      const telefono =
+        this.dataset.telefono;
+
+      const correo =
+        this.dataset.correo;
+
+      const cia =
+        this.dataset.cia;
+
+      const curso =
+        this.dataset.curso;
+
+      const fecha =
+        this.dataset.fecha;
+
+      const hora =
+        this.dataset.hora;
+
+      const duracion =
+        this.dataset.duracion;
+
+      const infraccion =
+        this.dataset.infraccion;
+
+      const estado =
+        this.dataset.estado;
+
+      /*
+       * Información personal
+       */
+
+      document
+        .getElementById("modalNombre")
+        .textContent = nombre;
+
+      document
+        .getElementById("modalDocumento")
+        .textContent = documento;
+
+      document
+        .getElementById("modalTelefono")
+        .textContent = telefono;
+
+      document
+        .getElementById("modalCorreo")
+        .textContent = correo;
+
+      /*
+       * Información del curso
+       */
+
+      document
+        .getElementById("modalCia")
+        .textContent = cia;
+
+      document
+        .getElementById("modalCurso")
+        .textContent =
+          "Curso: " + curso;
+
+      document
+        .getElementById("modalCursoDetalle")
+        .textContent = curso;
+
+      document
+        .getElementById("modalFecha")
+        .textContent = fecha;
+
+      document
+        .getElementById("modalHora")
+        .textContent = hora;
+
+      document
+        .getElementById("modalDuracion")
+        .textContent = duracion;
+
+      /*
+       * Información de la infracción
+       */
+
+      document
+        .getElementById("modalInfraccion")
+        .textContent = infraccion;
+
+      /*
+       * Estado
+       */
+
+      document
+        .getElementById("modalEstado")
+        .textContent = estado;
+
+    });
+
+  });
+
+</script> </body> </html>
